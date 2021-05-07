@@ -60,7 +60,20 @@
         </nav>
     </header>
 
-    <!-- hero section-->
+    <section>
+        <!-- flash messages -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for messages in messages %}
+                    <div class="row flashes">
+                        <h4 class="bg-warning text-white text-center">{{ message }}</h4>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
+    
+    <!-- hero section -->
     <div>
         <div class="jumbotron bg-transparent text-uppercase text-center mt-3">
             <h1 class="display-4 text-white text-shadow mb-5 hero-heading">Wondering what <br> to read today?</h1>
