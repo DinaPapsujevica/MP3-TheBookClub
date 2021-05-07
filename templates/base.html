@@ -20,7 +20,7 @@
     <header>
         <!--Navbar ------------>
         <nav class="navbar navbar-expand-lg text-shadow mt-3">
-            <a class="navbar-brand text-white text-uppercase ml-3" href="#">The book club</a>
+            <a class="navbar-brand text-white text-uppercase ml-3" href="{{ url_for('get_books') }}">The book club</a>
             <button
                 class="navbar-toggler"
                 type="button"
@@ -35,7 +35,7 @@
             <div class="collapse navbar-collapse justify-content-end text-shadow" id="navbarNav">
                 <ul class="navbar-nav mr-3">
                     <li class="nav-item ">
-                        <a class="nav-link text-white" href="#">Home</a>
+                        <a class="nav-link text-white" href="{{ url_for('get_books') }}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#">Profile</a>
@@ -53,7 +53,7 @@
                         <a class="nav-link text-white" href="#">Log In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Register</a>
+                        <a class="nav-link text-white" href="{{ url_for('register') }}">Register</a>
                     </li>
                 </ul>
             </div>
@@ -64,7 +64,7 @@
     <div>
         <div class="jumbotron bg-transparent text-uppercase text-center mt-3">
             <h1 class="display-4 text-white text-shadow mb-5 hero-heading">Wondering what <br> to read today?</h1>
-            <a class="btn btn-outline-warning btn-lg mt-3 text-shadow" href="#" role="button">Join our book club</a>
+            <a class="btn btn-outline-warning btn-lg mt-3 text-shadow" href="{{ url_for('register') }}" role="button">Join our book club</a>
         </div>
     </div>
 
