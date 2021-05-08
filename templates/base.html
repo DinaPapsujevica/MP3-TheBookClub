@@ -38,7 +38,7 @@
                         <a class="nav-link text-white" href="{{ url_for('get_books') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Profile</a>
+                        <a class="nav-link text-white" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#">Add Review</a>
