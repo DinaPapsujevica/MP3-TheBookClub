@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <!-- hero section -->
+    <div>
+        <div class="jumbotron bg-transparent text-uppercase text-center mt-3">
+            <h1 class="display-4 text-white text-shadow mb-5 hero-heading">Wondering what <br> to read today?</h1>
+            <a class="btn btn-info btn-lg mt-3 text-shadow" href="{{ url_for('register') }}" role="button">Join our book club</a>
+        </div>
+    </div>
+
     {% for book in books %}
         {{ book.title }} <br>
         {{ book.author }} <br>
