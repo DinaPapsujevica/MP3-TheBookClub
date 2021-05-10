@@ -42,7 +42,7 @@
                             <a class="nav-link text-white" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Add Review</a>
+                            <a class="nav-link text-white" href="{{ url_for('add_review') }}">Add Review</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#">Manage Categories</a>
@@ -71,7 +71,7 @@
                     <div class="container-fluid mt-3">
                         <div class="row flashes">
                             <div class="col-md-8 offset-md-2">
-                                <h4 class="text-white text-center p-2 font-weight-light" style="background-color: #00A109;">{{ message }}</h4>        
+                                <h4 class="text-white text-center p-2 font-weight-bold" style="background-color:">{{ message }}</h4>        
                             </div>
                         </div>
                     </div>
