@@ -23,6 +23,7 @@
                     <ul class="list-group list-group-flush text-white">
                             <li class="list-group-item" style="background-color: #c27355;">
                                 {{ book.date_of_review }}
+                                <p><em>by: {{ book.created_by }}</em></p>
                             </li>
                         {% endfor %}
                     </ul>
