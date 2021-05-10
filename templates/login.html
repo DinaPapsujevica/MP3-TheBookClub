@@ -1,18 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2 class="text-center text-white text-uppercase font-weight-light mb-3 mt-5 text-shadow">Log In</h2>
+    <h2 class="text-center text-white text-uppercase font-weight-light mb-5 mt-5 text-shadow">Log In</h2>
 
     <div class="row">
-        <div class="col-md-6 offset-md-3 bg-light border border-info mb-5">
+        <div class="col-md-6 offset-md-3 bg-light border border-info mb-5 mt5" style="color: #c27355;">
             <form method="POST" action="{{ url_for('login') }}">
                 <div class="form-group mt-3">
-                    <label for="username">Username<i class="bi bi-person-fill ml-2" style="font-size: 28px; color: #c27355;"></i></label>
+                    <label for="username"><i class="bi bi-person-fill mr-2" style="font-size: 28px; color: #c27355;"></i>Username</label>
                     <input id="username" name="username" type="text" 
                         class="form-control" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
                 </div>
                 <div class="form-group">
-                    <label for="password">Password<i class="bi bi-lock-fill ml-2" style="font-size: 28px; color: #c27355;"></i></label>
+                    <label for="password"><i class="bi bi-lock-fill mr-2" style="font-size: 28px; color: #c27355;"></i>Password</label>
                     <input id="password" name="password" type="password" 
                         class="form-control" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
                 </div>

@@ -33,3 +33,18 @@ body {
 .btn-main:hover {
     color: #c27355;
 }
+
+form {
+    border: 2px solid #c27355;
+    color: #c27355;
+}
+
+.form-control {
+    border: 1px solid #c27355;
+    color: #c27355;
+}
+
+.form-group i {
+    font-size: 20px;
+    color: #c27355;
+}
