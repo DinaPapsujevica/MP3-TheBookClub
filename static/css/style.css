@@ -26,10 +26,10 @@ body {
 }
 
 .btn-main {
-    background-color: #00A109;
+    background-color: #c27355;
     border-radius: 200px;
 }
 
 .btn-main:hover {
-    color: #00A109;
+    color: #c27355;
 }
