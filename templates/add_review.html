@@ -1,6 +1,40 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2 class="text-center text-white text-uppercase font-weight-light mb-3 mt-5 text-shadow">Add New Book Review</h2>
+    <h2 class="text-center text-white text-uppercase font-weight-light mb-5 mt-5 text-shadow">Add New Book Review</h2>
+
+    <div class="row">
+        <form class="col-md-6 offset-md-3 mt-5 bg-light" style="border: 2px solid #c27355;" method="POST" action="">
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Image</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            <div class="form-group mt-3">
+                <label for="formGroupExampleInput">Title</label>
+                <input type="text" class="form-control" style="border: 1px solid #c27355; id="formGroupExampleInput" placeholder="Example input placeholder">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Author</label>
+                <input type="text" class="form-control" style="border: 1px solid #c27355; id="formGroupExampleInput2" placeholder="Another input placeholder">
+            </div>
+            <div class="form-group">
+            <label for="inputState">Category</label>
+            <select id="inputState" class="form-control">
+                <option selected>Choose...</option>
+                <option>...</option>
+            </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Review text</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <p>Date of review:
+                    <input type="text" id="datepicker">
+                </p>
+
+            </div>
+            </div>
+        </form>
+    </div>  
 
 {% endblock %}
