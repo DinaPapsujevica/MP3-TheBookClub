@@ -9,46 +9,22 @@
         </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid mb-5">
         <div class="row">
             <div class="col-md-6 col-lg-5 offset-lg-1">
-                <div class="card text-white" style="width: 22rem; background-color: #c27355;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        {% for book in books %}
-                        <h5 class="card-title text-shadow">
-                            <strong>{{ book.title }}</strong> : {{ book.author }}</h5>
-                        <p class="card-text">{{ book.review_text }}</p>
-                    </div>
-                    <ul class="list-group list-group-flush text-white">
-                            <li class="list-group-item" style="background-color: #c27355;">
-                                {{ book.date_of_review }}
-                                <p><em>by: {{ book.created_by }}</em></p>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="card-link text-white">Read More >></a>
-                    </div>
+                <div class="card bg-transparent shadow" style="width: 22rem; border: 2px solid #c27355; color: #fff;">
+                    {% for book in books %}
+                        <div class="card-body">
+                            <img src="{{ book.image }}" class="card-img-top" alt="book image"> 
+                            <h5 class="card-title">
+                                <strong>{{ book.title }}</strong> : {{ book.author }}</h5>
+                            <p class="card-text">{{ book.review_text }}</p>
+                            <p class="card-text">{{ book.date_of_review }}</p>
+                            <p><em>by: {{ book.created_by }}</em></p>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
-            <!-- <div class="col-md-6 col-lg-5 offset-lg-1">
-                <div class="card" style="width: 25rem; background-color: #EDD9D1;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">An item</li>
-                        <li class="list-group-item">A second item</li>
-                        <li class="list-group-item">A third item</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="card-link">Read More >></a>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
  

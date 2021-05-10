@@ -5,7 +5,7 @@
 
     <div class="container-fluid mb-5">
         <div class="row">
-            <form class="col-md-6 offset-md-3 mt-5 bg-light" method="POST" action="{{ url_for('add_review') }}">
+            <form class="col-md-6 offset-md-3 mt-5 bg-light was-validated" method="POST" action="{{ url_for('add_review') }}">
                 <!-- image -->
                 <div class="row">
                     <div class="col-md-6 form-group mt-3">
@@ -30,9 +30,9 @@
                 <!-- categories -->
                 <div class="row">
                     <div class="col-md-6 form-group">
-                    <label for="category_name" required><i class="bi bi-folder mr-2"></i>Category</label>
-                    <select id="category_name" class="form-control validate" name="category_name" required>
-                        <option selected style="color: #c27355;" >Choose Category</option>
+                    <label for="category_name"><i class="bi bi-folder mr-2"></i>Category</label>
+                    <select id="category_name" class="custom-select" name="category_name" required>
+                        <option selected style="color: #c27355;" value="" >Choose Category</option>
                         {% for category in categories %}
                             <option value="{{ category.category_name}}" style="color: #c27355;">{{ category.category_name}}</option>
                         {% endfor %}
