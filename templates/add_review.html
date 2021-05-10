@@ -3,40 +3,63 @@
 
     <h2 class="text-center text-white text-uppercase font-weight-light mb-5 mt-5 text-shadow">Add New Book Review</h2>
 
-    <div class="row">
-        <form class="col-md-6 offset-md-3 mt-5 bg-light" method="POST" action="">
-            <div class="form-group mt-3">
-                <label for="exampleFormControlFile1"><i class="bi bi-image mr-2"></i>Image</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1" required>
-            <div class="form-group mt-3">
-                <label for="title"><i class="bi bi-book mr-2"></i>Book Title</label>
-                <input type="text" class="form-control" id="title" name="title" required>
-            </div>
-            <div class="form-group">
-                <label for="author"><i class="bi bi-person mr-2"></i>Author</label>
-                <input type="text" class="form-control" id="author" name="author" required>
-            </div>
-            <div class="form-group">
-            <label for="category_name" required><i class="bi bi-folder mr-2"></i>Category</label>
-            <select id="category_name" class="form-control validate" name="category_name" required>
-                <option selected style="color: #c27355;" >Choose Category</option>
-                {% for category in categories %}
-                    <option value="{{ category.category_name}}" style="color: #c27355;">{{ category.category_name}}</option>
-                {% endfor %}
-            </select>
-            </div>
-            <div class="form-group">
-                <label for="review_text"><i class="bi bi-pencil-square mr-2"></i>Review text</label>
-                <textarea class="form-control" id="review_text" name="review_text" rows="3" required></textarea>
-            </div>
-            <div class="form-group">
-                <p><i class="bi bi-calendar mr-2"></i>Date of review:
-                    <input type="text" id="datepicker" style="border: 1px solid #c27355; color: #c27355;" required>
-                </p>
-
-            </div>
-            </div>
-        </form>
-    </div>  
+    <div class="container-fluid mb-5">
+        <div class="row">
+            <form class="col-md-6 offset-md-3 mt-5 bg-light" method="POST" action="{{ url_for('add_review') }}">
+                <!-- image -->
+                <div class="row">
+                    <div class="col-md-6 form-group mt-3">
+                        <label for="exampleFormControlFile1"><i class="bi bi-image mr-2"></i>Image</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1" required>
+                    </div>
+                </div>
+                <!-- title -->
+                <div class="row">
+                    <div class="col-md-10 form-group mt-3">
+                        <label for="title"><i class="bi bi-book mr-2"></i>Book Title</label>
+                        <input type="text" class="form-control" id="title" name="title" required>
+                    </div>
+                </div>
+                <!-- author -->
+                <div class="row">
+                    <div class="col-md-10 form-group">
+                        <label for="author"><i class="bi bi-person mr-2"></i>Author</label>
+                        <input type="text" class="form-control" id="author" name="author" required>
+                    </div>
+                </div>
+                <!-- categories -->
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                    <label for="category_name" required><i class="bi bi-folder mr-2"></i>Category</label>
+                    <select id="category_name" class="form-control validate" name="category_name" required>
+                        <option selected style="color: #c27355;" >Choose Category</option>
+                        {% for category in categories %}
+                            <option value="{{ category.category_name}}" style="color: #c27355;">{{ category.category_name}}</option>
+                        {% endfor %}
+                    </select>
+                    </div>
+                </div>
+                <!-- review text -->
+                <div class="row">
+                    <div class="col-md-10 form-group">
+                        <label for="review_text"><i class="bi bi-pencil-square mr-2"></i>Review text</label>
+                        <textarea class="form-control" id="review_text" name="review_text" rows="3" required></textarea>
+                    </div>
+                </div>
+                <!-- datepicker -->
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <p><i class="bi bi-calendar mr-2"></i>Date of review:
+                            <input type="text" id="datepicker" style="border: 1px solid #c27355; color: #c27355;" required>
+                        </p>
+                    </div>
+                </div>
+                <!-- submit button -->
+                <div class="row">
+                    <button type="submit" class="btn col-6 offset-3 text-white text-uppercase mb-3 mt-3" style="background-color: #c27355;">Add Review</button> 
+                </div>
+            </form>
+        </div>  
+    </div>
 
 {% endblock %}
