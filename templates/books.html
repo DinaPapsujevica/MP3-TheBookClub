@@ -9,23 +9,6 @@
         </div>
     </div>
 
-    <div class="container-fluid mb-5">
-        <div class="row">
-            <div class="col-md-6 col-lg-5 offset-lg-1">
-                <div class="card bg-transparent shadow" style="width: 22rem; border: 2px solid #c27355; color: #fff;">
-                    {% for book in books %}
-                        <div class="card-body">
-                            <img src="{{ book.image }}" class="card-img-top" alt="book image"> 
-                            <h5 class="card-title">
-                                <strong>{{ book.title }}</strong> : {{ book.author }}</h5>
-                            <p class="card-text">{{ book.review_text }}</p>
-                            <p class="card-text">{{ book.date_of_review }}</p>
-                            <p><em>by: {{ book.created_by }}</em></p>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </div>
+    
  
 {% endblock %}
