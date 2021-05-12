@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h2 class="text-center text-white text-uppercase font-weight-light mb-5 mt-5 text-shadow">Add Category</h2>
+
+    <div class="container-fluid mb-5">
+        <div class="row">
+            <form class="col-md-6 offset-md-3 mt-5 bg-light was-validated" method="POST" action="{{ url_for('add_category') }}">
+                <!-- category name -->
+                <div class="row">
+                    <div class="col-md-10 form-group mt-3">
+                        <label for="category_name"><i class="bi bi-book mr-2"></i>Category Name</label>
+                        <input type="text" class="form-control" id="category_name" name="category_name" minlength="3" maxlength="25" required>
+                    </div>
+                </div>
+                <!-- submit button -->
+                <div class="row">
+                    <button type="submit" class="btn col-6 offset-3 text-white text-uppercase mb-3 mt-3" style="background-color: #c27355;">Add Category</button> 
+                </div>
+            </form>
+        </div>  
+    </div>
+
+{% endblock %}
