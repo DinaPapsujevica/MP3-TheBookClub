@@ -17,7 +17,9 @@
                         <div class="card-body">
                             <img src="{{ book.image }}" class="card-img-top" alt="book image"> 
                             <h5 class="card-title">
-                                <strong>{{ book.title }}</strong> : {{ book.author }}</h5>
+                                <strong>{{ book.title }}</strong> : {{ book.author }}
+                            </h5>
+                            <strong>{{ book.category_name }}</strong>
                             <p class="card-text">{{ book.review_text }}</p>
                             <p class="card-text">{{ book.date_of_review }}</p>
                             <p><em>by: {{ book.created_by }}</em></p>
