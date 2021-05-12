@@ -47,9 +47,11 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" href="{{ url_for('add_book') }}">Add Book</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Manage Categories</a>
-                        </li>
+                        {% if session.user|lower == "admin"|lower %}
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="{{ url_for('get_categories') }}">Manage Categories</a>
+                            </li>
+                        {% endif %}
                         <li class="nav-item">
                             <a class="nav-link text-white" href="{{ url_for('logout') }}">Log Out</a>
                         </li>
