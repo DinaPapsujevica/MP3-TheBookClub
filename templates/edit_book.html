@@ -10,21 +10,21 @@
                 <div class="row">
                     <div class="col-md-6 form-group mt-3">
                         <label for="image"><i class="bi bi-image mr-2"></i>Image</label>
-                        <input type="file" class="form-control-file" id="image" name="image" required>
+                        <input type="file" class="form-control-file" id="image" name="image" value="{{ book.image }}" required>
                     </div>
                 </div>
                 <!-- title -->
                 <div class="row">
                     <div class="col-md-10 form-group mt-3">
                         <label for="title"><i class="bi bi-book mr-2"></i>Book Title</label>
-                        <input type="text" class="form-control" id="title" name="title" required>
+                        <input type="text" class="form-control" id="title" name="title" value="{{ book.title }}" required>
                     </div>
                 </div>
                 <!-- author -->
                 <div class="row">
                     <div class="col-md-10 form-group">
                         <label for="author"><i class="bi bi-person mr-2"></i>Author</label>
-                        <input type="text" class="form-control" id="author" name="author" required>
+                        <input type="text" class="form-control" id="author" name="author" value="{{ book.author }}" required>
                     </div>
                 </div>
                 <!-- categories -->
@@ -32,9 +32,13 @@
                     <div class="col-md-6 form-group">
                     <label for="category_name"><i class="bi bi-folder mr-2"></i>Category</label>
                     <select id="category_name" class="custom-select" name="category_name" required>
-                        <option selected style="color: #c27355;" value="" >Choose Category</option>
+                        <option disabled style="color: #c27355;" value="" >Choose Category</option>
                         {% for category in categories %}
-                            <option value="{{ category.category_name}}" style="color: #c27355;">{{ category.category_name}}</option>
+                            {% if category.category_name == book.category_name %}
+                                <option value="{{ category.category_name}}" selected style="color: #c27355;">{{ category.category_name}}</option>
+                            {% else %}
+                                <option value="{{ category.category_name}}" style="color: #c27355;">{{ category.category_name}}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
                     </div>
@@ -43,20 +47,24 @@
                 <div class="row">
                     <div class="col-md-10 form-group">
                         <label for="review_text"><i class="bi bi-pencil-square mr-2"></i>Review text</label>
-                        <textarea class="form-control" id="review_text" name="review_text" rows="3" required></textarea>
+                        <textarea class="form-control" id="review_text" name="review_text" rows="3" required>
+                        {{- book.review_text }}
+                        </textarea>
                     </div>
                 </div>
                 <!-- datepicker -->
                 <div class="row">
                     <div class="col-md-6 form-group">
                         <p><i class="bi bi-calendar mr-2"></i>Date of review:
-                            <input type="text" id="datepicker" name="date_of_review" class="datepicker" style="border: 1px solid #c27355; color: #c27355;" required>
+                            <input type="text" id="datepicker" name="date_of_review" class="datepicker"
+                             value="{{ book.date_of_review}}" style="border: 1px solid #c27355; color: #c27355;" required>
                         </p>
                     </div>
                 </div>
                 <!-- submit button -->
                 <div class="row">
-                    <button type="submit" class="btn col-6 offset-3 text-white text-uppercase mb-3 mt-3" style="background-color: #c27355;">Edit Book</button> 
+                    <button type="submit" class="btn col-6 offset-3 text-white text-uppercase mb-3 mt-3" style="background-color: #c27355;">Edit Book</button>
+                     
                 </div>
             </form>
         </div>  
