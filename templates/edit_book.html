@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h2 class="text-center text-white text-uppercase font-weight-light mb-5 mt-5 text-shadow">Edit Book</h2>
+
+    <div class="container-fluid mb-5">
+        <div class="row">
+            <form class="col-md-6 offset-md-3 mt-5 bg-light was-validated" method="POST" action="{{ url_for('edit_book', book_id=book._id) }}">
+                <!-- image -->
+                <div class="row">
+                    <div class="col-md-6 form-group mt-3">
+                        <label for="image"><i class="bi bi-image mr-2"></i>Image</label>
+                        <input type="file" class="form-control-file" id="image" name="image" required>
+                    </div>
+                </div>
+                <!-- title -->
+                <div class="row">
+                    <div class="col-md-10 form-group mt-3">
+                        <label for="title"><i class="bi bi-book mr-2"></i>Book Title</label>
+                        <input type="text" class="form-control" id="title" name="title" required>
+                    </div>
+                </div>
+                <!-- author -->
+                <div class="row">
+                    <div class="col-md-10 form-group">
+                        <label for="author"><i class="bi bi-person mr-2"></i>Author</label>
+                        <input type="text" class="form-control" id="author" name="author" required>
+                    </div>
+                </div>
+                <!-- categories -->
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                    <label for="category_name"><i class="bi bi-folder mr-2"></i>Category</label>
+                    <select id="category_name" class="custom-select" name="category_name" required>
+                        <option selected style="color: #c27355;" value="" >Choose Category</option>
+                        {% for category in categories %}
+                            <option value="{{ category.category_name}}" style="color: #c27355;">{{ category.category_name}}</option>
+                        {% endfor %}
+                    </select>
+                    </div>
+                </div>
+                <!-- review text -->
+                <div class="row">
+                    <div class="col-md-10 form-group">
+                        <label for="review_text"><i class="bi bi-pencil-square mr-2"></i>Review text</label>
+                        <textarea class="form-control" id="review_text" name="review_text" rows="3" required></textarea>
+                    </div>
+                </div>
+                <!-- datepicker -->
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <p><i class="bi bi-calendar mr-2"></i>Date of review:
+                            <input type="text" id="datepicker" name="date_of_review" class="datepicker" style="border: 1px solid #c27355; color: #c27355;" required>
+                        </p>
+                    </div>
+                </div>
+                <!-- submit button -->
+                <div class="row">
+                    <button type="submit" class="btn col-6 offset-3 text-white text-uppercase mb-3 mt-3" style="background-color: #c27355;">Edit Book</button> 
+                </div>
+            </form>
+        </div>  
+    </div>
+
+{% endblock %}
