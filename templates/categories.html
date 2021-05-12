@@ -15,7 +15,7 @@
                     <div class="card text-center card bg-light shadow mb-5" style="width: 18rem; border: 2px solid #c27355; color: #c27355;">
                         <div class="card-body">
                             <h5 class="card-title mb-5">{{ category.category_name }}</h5>
-                            <a href="#" class="card-link btn btn-info btn-sm">Edit</a>
+                            <a href="{{ url_for('edit_category', category_id=category._id) }}" class="card-link btn btn-info btn-sm">Edit</a>
                             <a href="#" class="card-link btn btn-danger btn-sm">Delete</a>
                         </div>
                     </div>
