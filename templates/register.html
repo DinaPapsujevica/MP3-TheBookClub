@@ -1,26 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2 class="text-center text-white text-uppercase font-weight-light mb-3 mt-5 text-shadow">Register</h2>
+    <h2 class="text-center text-white text-uppercase font-weight-light mb-5 mt-5 text-shadow">Register</h2>
 
-    <div class="row">
-        <div class="col-md-6 offset-md-3 bg-light border border-info mb-5">
-            <form method="POST" action="{{ url_for('register') }}">
-                <div class="form-group mt-3">
-                    <label for="username">Username<i class="bi bi-person-fill ml-2" style="font-size: 28px; color:#00A109;"></i></label>
-                    <input id="username" name="username" type="text" 
-                         minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password<i class="bi bi-lock-fill ml-2" style="font-size: 28px; color:#00A109;"></i></label>
-                    <input id="password" name="password" type="password" 
-                         minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="form-control" required>
-                </div>
-                <button type="submit" class="col-6 offset-3 btn text-white text-uppercase mb-3 mt-3" style="background-color: #00A109;">Register</button>
-            </form>
-            <div class="row">
-                <div class="col-12">
-                    <p class="text-center">Already Registered? <a href="{{ url_for('login') }}">Log In</a></p>
+    <div class="container-fluid mb-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 bg-light pt-3">
+                <form method="POST" action="{{ url_for('register') }}">
+                    <div class="form-group mt-3 p-2">
+                        <label for="username">Username<i class="bi bi-person-fill ml-2" ></i></label>
+                        <input id="username" name="username" type="text" 
+                            minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="form-control" required>
+                    </div>
+                    <div class="form-group p-2">
+                        <label for="password">Password<i class="bi bi-lock-fill ml-2"></i></label>
+                        <input id="password" name="password" type="password" 
+                            minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="form-control" required>
+                    </div>
+                    <button type="submit" class="col-6 offset-3 btn text-white text-uppercase mb-3 mt-3">Register</button>
+                </form>
+                <div class="row mt-2">
+                    <div class="col-12">
+                        <p class="text-center">Already Registered? <a href="{{ url_for('login') }}" class="text-info">Log In</a></p>
+                    </div>
                 </div>
             </div>
         </div>

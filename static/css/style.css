@@ -39,6 +39,10 @@ form {
     color: #c27355;
 }
 
+.btn {
+    background-color: #c27355;
+}
+
 .form-control {
     border: 1px solid #c27355;
     color: #c27355;
