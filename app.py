@@ -153,7 +153,7 @@ def add_category():
         mongo.db.categories.insert_one(category)
         flash("New Category Added")
         return redirect(url_for("get_categories"))
-      
+     
     return render_template("add_category.html")
 
 

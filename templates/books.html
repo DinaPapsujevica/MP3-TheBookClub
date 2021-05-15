@@ -5,12 +5,13 @@
     <div>
         <div class="jumbotron bg-transparent text-uppercase text-center">
             <h1 class="text-white text-shadow hero-heading">Wondering what to read today?
-            <a class="btn btn-outline-light btn-lg btn-main ml-3" href="{{ url_for('register') }}" role="button">Join our book club</a></h1>
+            <a class="btn btn-outline-light btn-lg btn-main ml-3" href="{{ url_for('register') }}" role="button">Discover great books!</a></h1>
             
         </div>
     </div>
 
     <div class="container-fluid ">
+        <h5 class="text-white font-italic font-weight-light text-shadow text-left ml-5 pl-5">Our reader's reviews</h5>
         <div class="row mt-5">
             {% for book in books %}
                 <div class="col-8">
@@ -28,14 +29,28 @@
                         <div class="row mb-3">
                             <div class="col-6 text-center">
                                 {% if session.user|lower == book.created_by|lower %}
-                                    <a href="{{ url_for('edit_book', book_id=book._id) }}" class="btn btn-primary btn-sm mr-2">Edit</a>
-                                    <a href="{{ url_for('delete_book', book_id=book._id) }}" class="btn btn-danger btn-sm">Delete</a>
+                                    <a href="{{ url_for('edit_book', book_id=book._id) }}" class=" btn-primary btn-sm mr-2">Edit</a>
+                                    <a href="{{ url_for('delete_book', book_id=book._id) }}" class=" btn-danger btn-sm">Delete</a>
                                 {% endif %}
                             </div>
                         </div>
                     </div>
                 </div>
             {% endfor %}
+            <div class="col">
+                <h5 class="text-white font-italic font-weight-light text-shadow text-center ml-5 pl-5 mb-5">Categories</h5>
+                <div class="row">
+                    {% for category in categories %}
+                        <div class="col-6 col-md-3 offset-md-3">
+                            <div class="card bg-transparent shadow mb-3" style="width: 10rem; border: 2px solid #c27355; color: #fff;"> 
+                                <div class="card-body text-uppercase text-center text-shadow">
+                                    <a>{{ category.category_name }}</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </div>
     
