@@ -4,15 +4,16 @@
     <!-- hero section -->
     <div>
         <div class="jumbotron bg-transparent text-uppercase text-center">
-            <h1 class="text-white text-shadow hero-heading">Wondering what to read today?</h1>
-            <a class="btn btn-outline-light btn-lg text-shadow btn-main mt-3" href="{{ url_for('register') }}" role="button">Join our book club</a>
+            <h1 class="text-white text-shadow hero-heading">Wondering what to read today?
+            <a class="btn btn-outline-light btn-lg btn-main ml-3" href="{{ url_for('register') }}" role="button">Join our book club</a></h1>
+            
         </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid ">
         <div class="row mt-5">
             {% for book in books %}
-                <div class="col-md-6">
+                <div class="col-8">
                     <div class="card bg-transparent shadow mb-3" style="width: 22rem; border: 2px solid #c27355; color: #fff;">
                         <div class="card-body">
                             <img src="{{ book.image }}" class="card-img-top" alt="book image"> 
