@@ -52,4 +52,24 @@ form {
     color: #c27355;
 }
 
+.category-card {
+    width: 10rem;
+    border: 2px solid #c27355;
+    transition: transform 0.2s;
+    margin: 0 auto;
+}
+
+.category-card:hover {
+    -ms-transform: scale(1.15); /* IE 9 */
+    -webkit-transform: scale(1.15); /* Safari 3-8 */
+    transform: scale(1.15);
+}
+
+.category-card a {
+    color: #fff;
+}
+.category-card a:hover {
+    text-decoration: none;
+}
+
 

@@ -53,10 +53,10 @@ def login():
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-                         
+                        
         if existing_user:
             if check_password_hash(
-                existing_user["password"], request.form.get("password")): 
+               existing_user["password"], request.form.get("password")): 
                     session["user"] = request.form.get("username").lower()
                     flash("Welcome, {}".format(
                         request.form.get("username")))
@@ -153,7 +153,7 @@ def add_category():
         mongo.db.categories.insert_one(category)
         flash("New Category Added")
         return redirect(url_for("get_categories"))
-     
+    
     return render_template("add_category.html")
 
 
