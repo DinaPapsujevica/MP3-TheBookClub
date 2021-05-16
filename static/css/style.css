@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/hero2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/hero2.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -68,8 +68,23 @@ form {
 .category-card a {
     color: #fff;
 }
-.category-card a:hover {
+/* .category-card a:hover {
     text-decoration: none;
-}
+} */
 
+/* ------------------------------------------ Media queries */
+/* Small phones to small tablets from 481 to 767px */
+@media only screen and (max-width: 767px) {
+ .hero-heading {
+    font-size: 22px;
+  }
+
+  .btn-main {
+    font-size: 16px;
+  }
+
+  form {
+      margin: 2px;
+  }
+}
 
