@@ -78,116 +78,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mb-3">
                     <div class="col-6">
-                        <div class="card bg-transparent shadow mb-3"> 
-                            <div class="card-body text-uppercase text-center text-shadow category-card">
-                                <a href="#" class="text-decoration-none">History</a>
-                            </div>
+                        <div class="card-body text-uppercase text-center text-shadow category-card">
+                            <a href="#" class="text-decoration-none">History</a>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="card bg-transparent shadow mb-3"> 
-                            <div class="card-body text-uppercase text-center text-shadow category-card">
-                                <a href="#" class="text-decoration-none">Politics</a>
-                            </div>
+                    <div class="col-6"> 
+                        <div class="card-body text-uppercase text-center text-shadow category-card">
+                            <a href="#" class="text-decoration-none">Politics</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- <div class="container-fluid ">
-        <div class="row mt-5">
-            <div class="col-md-6">
-                <h5 class="text-white font-italic font-weight-light text-shadow text-left ml-5 pl-5 mb-3">
-                    Our reader's reviews
-                </h5>
-            </div>
-        </div>
-        <div class="row">
-            {% for book in books %}
-                <div class="col-12 col-md-6 d-flex">
-                    <div class="card bg-transparent shadow mb-3 mx-auto" style="width: 20rem; border: 2px solid #c27355; color: #fff;">
-                        <div class="card-body text-center">
-                            <img src="{{ book.image }}" class="card-img-top img-thumbnail" alt="book image"> 
-                            <h5 class="card-title">
-                                <strong>{{ book.title }}</strong> : {{ book.author }}
-                            </h5>
-                            <strong>{{ book.category_name }}</strong>
-                            <p class="card-text">{{ book.review_text }}</p>
-                            <p class="card-text">{{ book.date_of_review }}</p>
-                            <p><em>by: {{ book.created_by }}</em></p>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col text-center">
-                                {% if session.user|lower == book.created_by|lower %}
-                                    <a href="{{ url_for('edit_book', book_id=book._id) }}" class=" btn-primary btn-sm mr-2">Edit</a>
-                                    <a href="{{ url_for('delete_book', book_id=book._id) }}" class=" btn-danger btn-sm">Delete</a>
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-            <div class="col-12 col-md-6 d-flex">
-                <div class="row">
-                    <div class="col">
-                        <h5 class="text-white font-italic font-weight-light text-shadow text-center ml-5 pl-5 mb-3">Categories</h5>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6 col-md-3 offset-md-3">
-                        <div class="bg-transparent shadow mb-3 "> 
-                            <div class="card-body text-uppercase text-center text-shadow category-card">
-                                <a href="#" class="text-decoration-none">Romance</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-3 offset-md-1">
-                            <div class="card bg-transparent shadow mb-3"> 
-                                <div class="card-body text-uppercase text-center text-shadow category-card">
-                                    <a href="#" class="text-decoration-none">Thriller</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="row">
-                        <div class="col-6 col-md-3 offset-md-3">
-                            <div class="card bg-transparent shadow mb-3"> 
-                                <div class="card-body text-uppercase text-center text-shadow category-card">
-                                    <a href="#" class="text-decoration-none">Health</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 offset-md-1">
-                            <div class="card bg-transparent shadow mb-3"> 
-                                <div class="card-body text-uppercase text-center text-shadow category-card">
-                                    <a href="#" class="text-decoration-none">History</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6 col-md-3 offset-md-3">
-                            <div class="card bg-transparent shadow mb-3"> 
-                                <div class="card-body text-uppercase text-center text-shadow category-card">
-                                    <a href="#" class="text-decoration-none">Politics</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 offset-md-1">
-                            <div class="card bg-transparent shadow mb-3"> 
-                                <div class="card-body text-uppercase text-center text-shadow category-card">
-                                    <a href="#" class="text-decoration-none">Travel</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    
  
 {% endblock %}
