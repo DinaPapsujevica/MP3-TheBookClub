@@ -95,7 +95,7 @@ def logout():
 def add_book():
     if request.method == "POST":
         book = {
-           "image": request.form.get("image"),
+           "image_url": request.form.get("image_url"),
            "title": request.form.get("title"),
            "author": request.form.get("author"),
            "category_name": request.form.get("category_name"),
@@ -115,7 +115,7 @@ def add_book():
 def edit_book(book_id):
     if request.method == "POST":
         submit = {
-           "image": request.form.get("image"),
+           "image_url": request.form.get("image_url"),
            "title": request.form.get("title"),
            "author": request.form.get("author"),
            "category_name": request.form.get("category_name"),
