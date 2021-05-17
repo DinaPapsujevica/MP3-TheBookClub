@@ -1,52 +1,37 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The Book Club
 
-Welcome DinaPapsujevica,
+Milestone Project 3 - Python and Data Centric Development
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+The website is created with the purpose ...
+Go to website ...
 
-## Gitpod Reminders
+## UX
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Mockup
 
-`python3 -m http.server`
+![The Book Club mockup]()
 
-A blue button should appear to click: _Make Public_,
+### User stories
 
-Another blue button should appear to click: _Open Browser_.
+As a first time visitor I want 
+- to immediately understand what is the purpose of this website
+- to see content without being register
+- to be able to see content by Categories
+- to be able to register easily without needing to input a lot of personal information
+- to see that website is active and when is the latest book review added 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+As a returning user I want 
+- to Log In and Log Out easily
+- to be able add new book review easily
+- to be able to edit or delete my book reviews
+- to upload my own images using URL
+- to have my dashboard and see all my reviews
+- to Delete my profile easily
 
-A blue button should appear to click: _Make Public_,
+As a site owner/admin I want
+- to be able to edit and delete content created by users
+- to be able to add, edit and delete Categories
 
-Another blue button should appear to click: _Open Browser_.
+Website consists of .. sections:
+- **Landing page**
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI you can use:
-
-`heroku login -i`
-
-If you have Multi-Factor Authentication (MFA) enabled then use the API key that was generated for you at [Heroku](https://dashboard.heroku.com/account) as your password.
-This API key is unique and private to you so do not share it. If you accidently make it public then you can create a new one with _Regenerate API Key_.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
----
-
-Happy coding!
