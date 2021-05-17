@@ -133,21 +133,26 @@ All categories are listed in alphabetical order.
 
 ### Features left to implement
 
+- In the future, I would like to add a section with books that are most reviewed. Section name could be - Most read books by our users.
+- I would like to implement that visitors can see how many active users this website has.
+- Every time when admin adds a new Category, this Category automatically adds to the list on Landing page.
+
 ## Technologies Used
+
 - HTML
 - CSS 
 - JavaScript
-- [Bootstrap ]
-- jQuery
-- Heroku
-- MongoDB
 - Python+Flask
+- [Bootstrap v4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+- jQuery
+- MongoDB
 
 ## References
+
 - Code institute video projects, especcially Mini Project by Tim Nelson
 - [W3scools.com](https://www.w3schools.com/)
 - [Stackoverflow](https://stackoverflow.com/)
-- Slack 
+- [WebFX](https://www.webfx.com/blog/web-design/responsive-background-image/) 
 
 ## Testing
 
@@ -155,7 +160,19 @@ All categories are listed in alphabetical order.
 
 ## Credits
 
-### content
+### Content
+
+All the content on this website was written by me.
+
 ### Media
+
+Background image was taken from [Shutterstock](https://www.shutterstock.com/da/image-photo/beautiful-young-woman-warm-sweater-book-1656315796).
+
 ### Acknowledgements
 
+- I received inspiration for this project from Code Institute Mini Project by Tim Nelson 
+- Slack community
+- For testing user experience I received help from Ieva Malta
+- Big thanks for help and support to my mentor Spencer Barriball
+
+Website is created for educational use!
