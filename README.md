@@ -48,10 +48,10 @@ Website consists of 5 sections:
 Wireframes are available here:
 
 ![Landing page](static/wireframes/w-1.png)
-![Landing page](static/wireframes/w-2.png)
-![Landing page](static/wireframes/w-3.png)
-![Landing page](static/wireframes/w-4.png)
-![Landing page](static/wireframes/w-5.png)
+![Landing page](static/wireframes/w-2-1.png)
+![Landing page](static/wireframes/w-3-1.png)
+![Landing page](static/wireframes/w-4-1.png)
+![Landing page](static/wireframes/w-5-1.png)
 
 ## Features
 
