@@ -2,7 +2,11 @@
 
 Milestone Project 3 - Python and Data Centric Development
 
-The website is created with the purpose ...
+The website is created with the purpose to motivate people to read more books and share their opinions about the books they read.
+The site will be targeted at the people who love to read books and people who doubt what to read.
+Nowadays there is a huge choice of books for different ages, interests, and topics. Any one of us can get confused in this sea of books.
+That is why book review and recommendation sites are here to help solve it. 
+Existing user book reviews will help to choose and understand which could be your next book to read.
 Go to website ...
 
 ## UX
@@ -32,6 +36,53 @@ As a site owner/admin I want
 - to be able to edit and delete content created by users
 - to be able to add, edit and delete Categories
 
-Website consists of .. sections:
+Website consists of 5 sections:
+
 - **Landing page**
+- **Log In**
+- **Register**
+- **Profile**
+- **Add Book** 
+- **Manage Categories**
+
+Wireframes are available here:
+
+![Landing page](wireframes/landing_page.png)
+
+## Features
+
+### Existing Features
+Navbar on top helps user to navigate through the website. Web site Name in the left corner always brings the user back to the Landing page.
+On the medium and small sizes user can open navbar from the burger icon on the right top of the website.
+Footer section follows through all sections and sizes. 
+
+### Landing page
+
+### Features left to implement
+
+## Technologies Used
+- HTML
+- CSS 
+- JavaScript
+- [Bootstrap ]
+- jQuery
+- Heroku
+- MongoDB
+- Python+Flask
+
+## References
+- Code institute video projects, especcially Mini Project by Tim Nelson
+- [W3scools.com](https://www.w3schools.com/)
+- [Stackoverflow](https://stackoverflow.com/)
+- Slack 
+
+## Testing
+
+## Deployment
+
+## Credits
+
+### content
+### Media
+### Acknowledgements
 

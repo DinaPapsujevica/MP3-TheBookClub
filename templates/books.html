@@ -4,9 +4,9 @@
     <!-- hero section -->
     <div>
         <div class="jumbotron bg-transparent text-uppercase text-center">
-            <h1 class="text-white text-shadow hero-heading">Wondering what to read today?</h1>
+            <h1 class="text-white text-shadow hero-heading">Wondering what <br> to read today?</h1>
             
-            <a class="btn btn-outline-light btn-lg btn-main mt-3" href="{{ url_for('register') }}" role="button">Discover great books!</a>
+            <a class="btn btn-outline-light btn-main mt-3" href="{{ url_for('register') }}" role="button">Join and discover great books!</a>
             
         </div>
     </div>
@@ -24,7 +24,7 @@
                 <div class="row">
                     {% for book in books %}
                         <div class="col-12 col-md-6 offset-md-1">
-                            <div class="card bg-transparent shadow mb-3 mx-auto" style="width: 20rem; border: 2px solid #c27355; color: #fff;">
+                            <div class="card bg-transparent shadow mb-3 mx-auto" style="width: 20rem; color: #fff;">
                                 <div class="card-body text-center">
                                     <img src="{{ book.image_url }}" class="card-img-top img-thumbnail mb-3" alt="book image"> 
                                     <h5 class="card-title">
