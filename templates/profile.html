@@ -9,13 +9,14 @@
                 <a href="{{ url_for('add_book') }}" class="btn col-md-6 offset-md-3 text-white text-uppercase mb-3 mt-2">Add Book</a>
             </div>
         </div>
-        <div class="row mt-5">
-            {% for book in books %}
-                {% if session.user|lower == book.created_by|lower %}
+        
+        {% for book in books %}
+            {% if session.user|lower == book.created_by|lower %}
+                <div class="row mt-5">
                     <div class="col-md-6">
                         <div class="card bg-transparent shadow mb-3" style="width: 22rem; border: 2px solid #c27355; color: #fff;">
                             <div class="card-body">
-                                <img src="{{ book.image }}" class="card-img-top" alt="book image"> 
+                                <img src="{{ book.image_url }}" class="card-img-top" alt="book image"> 
                                 <h5 class="card-title">
                                     <strong>{{ book.title }}</strong> : {{ book.author }}
                                 </h5>
@@ -32,9 +33,9 @@
                             </div>
                         </div>
                     </div>
-                {% endif %}
-            {% endfor %}
-        </div>
+                </div>
+            {% endif %}
+        {% endfor %}
     </div>
         
         

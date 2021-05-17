@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="row mt-3 mb-3">
-                    <div class="col text-center">
+                    <div class="col col-md-6 offset-md-1 text-center">
                         <h5 class="text-white font-italic font-weight-light text-shadow">
                         Our reader's reviews
                         </h5>
@@ -21,10 +21,10 @@
                 </div>
                 <div class="row">
                     {% for book in books %}
-                        <div class="col-12">
+                        <div class="col-12 col-md-6 offset-md-1">
                             <div class="card bg-transparent shadow mb-3 mx-auto" style="width: 20rem; border: 2px solid #c27355; color: #fff;">
                                 <div class="card-body text-center">
-                                    <img src="{{ book.image }}" class="card-img-top img-thumbnail" alt="book image"> 
+                                    <img src="{{ book.image_url }}" class="card-img-top img-thumbnail mb-3" alt="book image"> 
                                     <h5 class="card-title">
                                         <strong>{{ book.title }}</strong> : {{ book.author }}
                                     </h5>
@@ -46,7 +46,7 @@
                     {% endfor %}
                 </div>
             </div>
-            <div class="col-md-6 ">
+            <div class="col-md-3 offset-md-3">
                 <div class="row mt-3 mb-3">
                     <div class="col text-center">
                         <h5 class="text-white font-italic font-weight-light text-shadow">
@@ -57,7 +57,7 @@
                 <div class="row mb-3">
                     <div class="col-6">
                         <div class="card-body text-uppercase text-center text-shadow category-card">
-                            <a href="#" class="text-decoration-none">Romance</a>
+                            <a href="{{ url_for('get_books') }}" class="text-decoration-none">Romance</a>
                         </div>
                     </div>
                     <div class="col-6"> 

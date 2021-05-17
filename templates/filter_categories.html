@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="text-center text-white text-uppercase font-weight-light mb-5 mt-5 text-shadow">{{ book.category_name }}</h2>
+
+<div class="container-fluid">
+    {% for book in books %}
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-1">
+                <div class="card bg-transparent shadow mb-3 mx-auto" style="width: 20rem; border: 2px solid #c27355; color: #fff;">
+                    <div class="card-body text-center">
+                        <img src="{{ book.image_url }}" class="card-img-top img-thumbnail mb-3" alt="book image"> 
+                        <h5 class="card-title">
+                            <strong>{{ book.title }}</strong> : {{ book.author }}
+                        </h5>
+                        <strong>{{ book.category_name }}</strong>
+                        <p class="card-text">{{ book.review_text }}</p>
+                        <p class="card-text">{{ book.date_of_review }}</p>
+                        <p><em>by: {{ book.created_by }}</em></p>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col text-center">
+                            {% if session.user|lower == book.created_by|lower %}
+                                <a href="{{ url_for('edit_book', book_id=book._id) }}" class=" btn-primary btn-sm mr-2">Edit</a>
+                                <a href="{{ url_for('delete_book', book_id=book._id) }}" class=" btn-danger btn-sm">Delete</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}
