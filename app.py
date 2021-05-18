@@ -25,6 +25,15 @@ def get_books():
     return render_template("books.html", books=books)
 
 
+@app.route("users_books")
+def users_books(user_id):
+    user_id = mongo.db.users.find_one(
+        {"username": session["user"]})["_id"]
+   
+    users_books = mongo.db.books.find({"_id": ObjectId(user_id)})
+    return render_template("profile.html")
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
