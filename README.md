@@ -158,6 +158,27 @@ All categories are listed in alphabetical order.
 
 ## Deployment
 
+To deploy website to Heroku, I take following steps:
+- Create a requirements.txt file by writing terminal command pip freeze --local > requirements.txt.
+- Create Procfile using terminal command echo web: python app.py > Procfile.
+- Log In into my Heroku.com account and click "New" > "Create New App" button in my dashboard. Give it a name and set the region to Europe.
+- From the dashboard, click "Deploy" and choose GitHub as Deployment method. That will setup automatic deployment from GitHub repository.
+- Add my repository name and confirm it by clicking "Connect".
+- From the dashboard, click "Settings" > "Reveal Config Vars".
+
+KEY | VALUE
+----|-----
+IP | 0.0.0.0
+PORT | 5000
+SECRET_KEY | <your_secret_key>
+MONGO_URI | mongodb+srv://<username>:<password>@<cluster_name>.6wwxi.mongodb.net/<database_name>?retryWrites=true&w=majority
+MONGO_DBNAME | <database_name>
+
+- Back in terminal write command git add requirements.txt and git commit -m "Add requirements.txt", 
+the same with Procfile - git add Procfile and git commit -m "Add Procfile" and then git push the project to GitHub.
+- In the heroku dashboard click "Deploy". 
+ 
+
 ## Credits
 
 ### Content
@@ -172,7 +193,6 @@ Background image was taken from [Shutterstock](https://www.shutterstock.com/da/i
 
 - I received inspiration for this project from Code Institute Mini Project by Tim Nelson 
 - Slack community
-- For testing user experience I received help from Ieva Malta
-- Big thanks for help and support to my mentor Spencer Barriball
+
 
 Website is created for educational use!
