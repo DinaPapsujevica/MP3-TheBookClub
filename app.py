@@ -25,13 +25,15 @@ def get_books():
     return render_template("books.html", books=books)
 
 
-@app.route("users_books")
+@app.route("/users_books/<user_id>")
 def users_books(user_id):
-    user_id = mongo.db.users.find_one(
-        {"username": session["user"]})["_id"]
-   
+    mongo.db.users.find_one({"username": session["user"]})["_id"]
+
     users_books = mongo.db.books.find({"_id": ObjectId(user_id)})
-    return render_template("profile.html")
+    user = mongo.db.users.find({"_id": ObjectId(user_id)})
+
+    session["user"] = request.form.get("username").lower()
+    return render_template("profile.html", user=user, users_books=users_books)
 
 
 @app.route("/register", methods=["GET", "POST"])

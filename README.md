@@ -192,6 +192,7 @@ Background image was taken from [Shutterstock](https://www.shutterstock.com/da/i
 ### Acknowledgements
 
 - I received inspiration for this project from Code Institute Mini Project by Tim Nelson 
+- Code Institute tutor assistance
 - Slack community
 
 
