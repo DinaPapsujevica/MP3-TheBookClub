@@ -73,7 +73,7 @@
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
-                    <div class="container-fluid mt-3">
+                    <div class="container-fluid">
                         <div class="row flashes">
                             <div class="col-md-8 offset-md-2">
                                 <h4 class="text-white text-center text-shadow font-weight-bold">{{ message }}</h4>        
@@ -90,9 +90,11 @@
     {% endblock %}
 
     <!--footer-->
-    <div class="row footer">
-        <div class="col text-center text-white font-weight-light text-shadow text-center">
-            <p style="font-size: 12px;">Copyright &commat; 2021 by The Book Club</p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center text-white font-weight-light text-shadow text-center">
+                <p style="font-size: 12px;">Copyright &commat; 2021 by The Book Club</p>
+            </div>
         </div>
     </div>
     
