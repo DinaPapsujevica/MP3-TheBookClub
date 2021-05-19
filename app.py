@@ -30,7 +30,17 @@ def users_books(username):
     user_id = mongo.db.users.find_one({"username": username})["_id"]
     users_books = mongo.db.books.find({"created_by": username})
 
-    return render_template("profile.html", user_id=user_id, users_books=users_books)
+    return render_template("profile.html",
+        user_id=user_id, users_books=users_books)
+
+
+@app.route("/delete_user/<username>")
+def delete_user(username):
+    mongo.db.users.remove({"username": username})
+    flash("Your Profile Successfully Deleted")
+    session.pop("user")
+    return redirect(url_for("register"))
+    
 
 
 @app.route("/register", methods=["GET", "POST"])
