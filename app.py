@@ -38,9 +38,8 @@ def users_books(username):
 def delete_user(username):
     mongo.db.users.remove({"username": username})
     flash("Your Profile Successfully Deleted")
-    session.pop("user")
-    return redirect(url_for("register"))
-    
+    session.clear("user")
+    return redirect(url_for("register"))  
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -50,7 +49,7 @@ def register():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            flash("Username already exists")
+            flash("Username already exists!")
             return redirect(url_for("register"))
 
         register = {
@@ -81,7 +80,7 @@ def login():
                     return redirect(url_for(
                         "profile", username=session["user"]))
             else:
-                flash("Incorrect Username and/or Password")
+                flash("Incorrect Username and/or Password!")
                 return redirect(url_for("login"))
 
         else:
@@ -105,28 +104,32 @@ def profile(username):
 @app.route("/logout")
 def logout():
     flash("You have been logged out")
-    session.pop("user")
+    session.clear("user")
     return redirect(url_for("login"))
 
 
 @app.route("/add_book", methods=["GET", "POST"])
 def add_book():
-    if request.method == "POST":
-        book = {
-           "image_url": request.form.get("image_url"),
-           "title": request.form.get("title"),
-           "author": request.form.get("author"),
-           "category_name": request.form.get("category_name"),
-           "review_text": request.form.get("review_text"),
-           "date_of_review": request.form.get("date_of_review"),
-           "created_by": session["user"]
-        }
-        mongo.db.books.insert_one(book)
-        flash("Book Review Successfully Added")
-        return redirect(url_for("get_books"))
+    if session.get('user'):
+        if request.method == "POST":
+            book = {
+            "image_url": request.form.get("image_url"),
+            "title": request.form.get("title"),
+            "author": request.form.get("author"),
+            "category_name": request.form.get("category_name"),
+            "review_text": request.form.get("review_text"),
+            "date_of_review": request.form.get("date_of_review"),
+            "created_by": session["user"]
+            }
+            mongo.db.books.insert_one(book)
+            flash("Book Review Successfully Added!")
+            return redirect(url_for("get_books"))
 
-    categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("add_book.html", categories=categories)
+        categories = mongo.db.categories.find().sort("category_name", 1)
+        return render_template("add_book.html", categories=categories)
+
+    flash("You must register or log in to add a book!")
+    return redirect(url_for("register"))
 
 
 @app.route("/edit_book/<book_id>", methods=["GET", "POST"])
@@ -158,21 +161,29 @@ def delete_book(book_id):
 
 @app.route("/get_categories")
 def get_categories():
-    categories = list(mongo.db.categories.find().sort("category_name", 1))
-    return render_template("categories.html", categories=categories)
+    if session.get('user'):
+        categories = list(mongo.db.categories.find().sort("category_name", 1))
+        return render_template("categories.html", categories=categories)
+  
+    flash("You must register or log in to manage categories!")
+    return redirect(url_for("register"))
 
 
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
-    if request.method == "POST":
-        category = {
-            "category_name": request.form.get("category_name")
-        }
-        mongo.db.categories.insert_one(category)
-        flash("New Category Added")
-        return redirect(url_for("get_categories"))
+    if session.get('user'):
+        if request.method == "POST":
+            category = {
+                "category_name": request.form.get("category_name")
+            }
+            mongo.db.categories.insert_one(category)
+            flash("New Category Added")
+            return redirect(url_for("get_categories"))
 
-    return render_template("add_category.html")
+        return render_template("add_category.html")
+
+    flash("You must register or log in to add category!")
+    return redirect(url_for("register"))    
 
 
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
