@@ -13,7 +13,7 @@ Go to website ...
 
 ### Mockup
 
-![The Book Club mockup]()
+![The Book Club mockup](static/wireframes/mock-up.png)
 
 ### User stories
 
