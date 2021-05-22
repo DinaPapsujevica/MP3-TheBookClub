@@ -6,5 +6,4 @@ $(document).ready(function() {
             minDate: '-3d'
         });
     });
-
-  });
+});

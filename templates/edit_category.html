@@ -5,7 +5,7 @@
 
     <div class="container-fluid mb-5">
         <div class="row p-2">
-            <form class="col-md-6 offset-md-3 mt-3 was-validated" method="POST" action="{{ url_for('edit_category', category_id=category._id) }}" style="background-color: #92343b; color: #fff;">
+            <form class="col-md-6 offset-md-3 mt-3 was-validated" method="POST" action="{{ url_for('edit_category', category_id=category._id) }}">
                 <!-- category name -->
                 <div class="row">
                     <div class="col-md-10 form-group mt-3">
@@ -16,7 +16,7 @@
                 </div>
                 <!-- submit button -->
                 <div class="row">
-                    <button type="submit" class="btn col-6 offset-3 text-white text-uppercase mb-3 mt-3" style="background-color: #c27355;">
+                    <button type="submit" class="btn col-6 offset-3 text-white text-uppercase mb-3 mt-3">
                         Edit Category
                     </button>
                     <a href="{{ url_for('get_categories') }}" class="col-2 text-white ml-3 mt-3 mb-3 pt-2">

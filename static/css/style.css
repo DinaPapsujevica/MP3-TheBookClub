@@ -16,13 +16,34 @@ body {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-.hero-heading {
-    word-spacing: 2px;
-    font-size: 38px;
+/*--------------------------------------Navbar */
+.navbar-toggler i {
+    font-size: 2rem;
+    color: #fff;
 }
 
+/*--------------------------------------Flash message */
 .flashes h4 {
     line-height: 2;
+}
+
+/*--------------------------------------Buttons */
+.btn {
+    background-color: #c27355;
+}
+
+.btn-edit {
+    background-color: #c27355;
+    color: #fff;
+}
+
+.btn-edit:hover {
+    color: #fff;
+}
+
+.btn-add {
+    font-size: 18px;
+    color: #c27355;
 }
 
 .btn-main {
@@ -35,13 +56,30 @@ body {
     color: #c27355;
 }
 
+/*--------------------------------------Hero section */
+.hero-heading {
+    word-spacing: 2px;
+    font-size: 38px;
+}
+
+/*--------------------------------------Books */
+.book-card {
+    background-color: #92343b;
+    width: 20rem;
+    color: #fff;
+}
+
+.card-img-top {
+    max-width:30%;
+    height: auto;
+}
+
+/*--------------------------------------Forms */
 form {
     border: 2px solid #c27355;
     color: #c27355;
-}
-
-.btn {
-    background-color: #c27355;
+    background-color: #92343b;
+    color: #fff;
 }
 
 .form-control {
@@ -54,11 +92,33 @@ form {
     color: #fff;
 }
 
+.custom-select {
+    color: #c27355;
+}
+
+.datepicker {
+    border: 1px solid #c27355;
+    color: #c27355;
+}
+
+.user-form {
+    color: #c27355;
+}
+
+/*--------------------------------------Categories */
 .category-card {
+    background-color: #92343b;
     width: 10rem;
     border: 0.5px solid #c27355;
     transition: transform 0.2s;
     margin: 0 auto;
+}
+
+.category-card-lg {
+    background-color: #92343b;
+    width: 16rem;
+    color: #fff;
+    border: 0.5px solid #c27355;
 }
 
 .category-card:hover {
@@ -71,20 +131,29 @@ form {
     color: #fff;
 }
 
+.custom-select option {
+    color: #c27355;
+}
+
+/*--------------------------------------Footer */
+.footer p {
+    font-size: 12px;
+}
 
 /* ------------------------------------------ Media queries */
 /* Small phones to small tablets from 481 to 767px */
 @media only screen and (max-width: 767px) {
- .hero-heading {
+
+    h2 {
+      font-size: 22px;
+  }
+
+    .hero-heading {
     font-size: 24px;
   }
 
   .btn-main {
     font-size: 14px;
-  }
-
-  h2 {
-      font-size: 22px;
   }
 
   .review-text {

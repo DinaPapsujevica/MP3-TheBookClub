@@ -5,7 +5,7 @@
 
     <div class="container-fluid mb-5">
         <div class="row p-2">
-            <form class="col-md-6 offset-md-3 mt-4 was-validated" method="POST" action="{{ url_for('edit_book', book_id=book._id) }}" style="background-color: #92343b; color: #fff;">
+            <form class="col-md-6 offset-md-3 mt-4 was-validated" method="POST" action="{{ url_for('edit_book', book_id=book._id) }}">
                 <!-- image -->
                 <div class="row">
                     <div class="col-md-6 form-group mt-3">
@@ -30,17 +30,17 @@
                 <!-- categories -->
                 <div class="row">
                     <div class="col-md-6 form-group">
-                    <label for="category_name"><i class="bi bi-folder mr-2"></i>Category</label>
-                    <select id="category_name" class="custom-select" name="category_name" required>
-                        <option disabled style="color: #c27355;" value="" >Choose Category</option>
-                        {% for category in categories %}
-                            {% if category.category_name == book.category_name %}
-                                <option value="{{ category.category_name}}" selected style="color: #c27355;">{{ category.category_name}}</option>
-                            {% else %}
-                                <option value="{{ category.category_name}}" style="color: #c27355;">{{ category.category_name}}</option>
-                            {% endif %}
-                        {% endfor %}
-                    </select>
+                        <label for="category_name"><i class="bi bi-folder mr-2"></i>Category</label>
+                        <select id="category_name" class="custom-select" name="category_name" required>
+                            <option disabled value="" >Choose Category</option>
+                            {% for category in categories %}
+                                {% if category.category_name == book.category_name %}
+                                    <option value="{{ category.category_name}}" selected >{{ category.category_name}}</option>
+                                {% else %}
+                                    <option value="{{ category.category_name}}">{{ category.category_name}}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
                     </div>
                 </div>
                 <!-- review text -->
@@ -57,13 +57,13 @@
                     <div class="col-md-6 form-group">
                         <p><i class="bi bi-calendar mr-2"></i>Date of review:
                             <input type="text" id="datepicker" name="date_of_review" class="datepicker"
-                             value="{{ book.date_of_review}}" style="border: 1px solid #c27355; color: #c27355;" required>
+                             value="{{ book.date_of_review}}" required>
                         </p>
                     </div>
                 </div>
                 <!-- submit button -->
                 <div class="row">
-                    <button type="submit" class="btn col-6 offset-2 text-white text-uppercase mb-3 mt-3" style="background-color: #c27355;">Edit Book</button>
+                    <button type="submit" class="btn col-6 offset-2 text-white text-uppercase mb-3 mt-3">Edit Book</button>
                     <a href="{{ url_for('get_books') }}" class="col-2 text-white ml-3 mt-3 mb-3 pt-2">Cancel</a>
                 </div>
             </form>

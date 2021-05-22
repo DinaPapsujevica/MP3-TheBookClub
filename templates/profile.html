@@ -14,9 +14,9 @@
                     {% for book in users_books %}
                         {% if session.user|lower == book.created_by|lower %}
                         <div class="col-md-6">
-                            <div class="card shadow mb-3 mx-auto" style=" background-color: #92343b; width: 20rem; color: #fff;">
+                            <div class="card shadow mb-3 mx-auto book-card">
                                 <div class="card-body text-center">
-                                    <img src="{{ book.image_url }}" class="card-img-top" alt="book image" style="max-width:30%; height: auto;"> 
+                                    <img src="{{ book.image_url }}" class="card-img-top mb-3" alt="book image"> 
                                     <h5 class="card-title">
                                         <strong>{{ book.title }}</strong> : {{ book.author }}
                                     </h5>
@@ -27,7 +27,7 @@
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col text-center">
-                                        <a href="{{ url_for('edit_book', book_id=book._id) }}" class=" btn-sm mr-2" style="background-color: #c27355; color: #fff;">Edit</a>
+                                        <a href="{{ url_for('edit_book', book_id=book._id) }}" class=" btn-sm btn-edit mr-2">Edit</a>
                                         <a href="{{ url_for('delete_book', book_id=book._id) }}" class="btn-danger btn-sm">Delete</a>
                                     </div>
                                 </div>

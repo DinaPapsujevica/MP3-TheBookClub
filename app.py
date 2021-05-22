@@ -31,14 +31,15 @@ def users_books(username):
     users_books = mongo.db.books.find({"created_by": username})
 
     return render_template("profile.html",
-        user_id=user_id, users_books=users_books)
+    user_id=user_id, users_books=users_books)
 
 
 @app.route("/delete_user/<username>")
 def delete_user(username):
     mongo.db.users.remove({"username": username})
+    session.clear()
+
     flash("Your Profile Successfully Deleted")
-    session.clear("user")
     return redirect(url_for("register"))  
 
 
@@ -104,7 +105,7 @@ def profile(username):
 @app.route("/logout")
 def logout():
     flash("You have been logged out")
-    session.clear("user")
+    session.clear()
     return redirect(url_for("login"))
 
 
@@ -128,7 +129,7 @@ def add_book():
         categories = mongo.db.categories.find().sort("category_name", 1)
         return render_template("add_book.html", categories=categories)
 
-    flash("You must register or log in to add a book!")
+    flash("You must Register or Log In to add a book!")
     return redirect(url_for("register"))
 
 
@@ -165,7 +166,7 @@ def get_categories():
         categories = list(mongo.db.categories.find().sort("category_name", 1))
         return render_template("categories.html", categories=categories)
   
-    flash("You must register or log in to manage categories!")
+    flash("You must Register or Log In to manage categories!")
     return redirect(url_for("register"))
 
 
@@ -182,7 +183,7 @@ def add_category():
 
         return render_template("add_category.html")
 
-    flash("You must register or log in to add category!")
+    flash("You must Register or Log in to add category!")
     return redirect(url_for("register"))    
 
 

@@ -24,9 +24,9 @@
                 <div class="row">
                     {% for book in books %}
                         <div class="col-12 col-md-6 offset-md-1">
-                            <div class="card shadow mb-3 mx-auto" style=" background-color: #92343b; width: 20rem; color: #fff;">
+                            <div class="card shadow mb-3 mx-auto book-card">
                                 <div class="card-body text-center">
-                                    <img src="{{ book.image_url }}" class="card-img-top mb-3" alt="book image" style="max-width:30%; height: auto;"> 
+                                    <img src="{{ book.image_url }}" class="card-img-top mb-3" alt="book image"> 
                                     <h5 class="card-title">
                                         <strong>{{ book.title }}</strong> : {{ book.author }}
                                     </h5>
@@ -38,8 +38,8 @@
                                 <div class="row mb-3">
                                     <div class="col text-center">
                                         {% if session.user|lower == book.created_by|lower %}
-                                            <a href="{{ url_for('edit_book', book_id=book._id) }}" class=" btn-sm mr-2" style="background-color: #c27355; color: #fff;">Edit</a>
-                                            <a href="{{ url_for('delete_book', book_id=book._id) }}" class=" btn-danger btn-sm">Delete</a>
+                                            <a href="{{ url_for('edit_book', book_id=book._id) }}" class="btn-sm btn-edit mr-2">Edit</a>
+                                            <a href="{{ url_for('delete_book', book_id=book._id) }}" class="btn-danger btn-sm">Delete</a>
                                         {% endif %}
                                     </div>
                                 </div>
@@ -58,36 +58,36 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-6">
-                        <div class="card-body text-uppercase text-center text-shadow category-card" style="background-color: #92343b;">
+                        <div class="card-body text-uppercase text-center text-shadow category-card">
                             <a href="#" class="text-decoration-none">Romance</a>
                         </div>
                     </div>
                     <div class="col-6"> 
-                        <div class="card-body text-uppercase text-center text-shadow category-card" style="background-color: #92343b;">
+                        <div class="card-body text-uppercase text-center text-shadow category-card">
                             <a href="#" class="text-decoration-none">Thriller</a>
                         </div>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-6">
-                        <div class="card-body text-uppercase text-center text-shadow category-card" style="background-color: #92343b;">
+                        <div class="card-body text-uppercase text-center text-shadow category-card">
                             <a href="#" class="text-decoration-none">Health</a>
                         </div>
                     </div>
                     <div class="col-6"> 
-                        <div class="card-body text-uppercase text-center text-shadow category-card" style="background-color: #92343b;">
+                        <div class="card-body text-uppercase text-center text-shadow category-card">
                             <a href="#" class="text-decoration-none">Travel</a>
                         </div>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-6">
-                        <div class="card-body text-uppercase text-center text-shadow category-card" style="background-color: #92343b;">
+                        <div class="card-body text-uppercase text-center text-shadow category-card">
                             <a href="#" class="text-decoration-none">History</a>
                         </div>
                     </div>
                     <div class="col-6"> 
-                        <div class="card-body text-uppercase text-center text-shadow category-card" style="background-color: #92343b;">
+                        <div class="card-body text-uppercase text-center text-shadow category-card">
                             <a href="#" class="text-decoration-none">Politics</a>
                         </div>
                     </div>

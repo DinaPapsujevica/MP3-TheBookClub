@@ -156,6 +156,14 @@ All categories are listed in alphabetical order.
 
 ## Testing
 
+For testing code validity i used:
+
+* [HTML Validator](https://validator.w3.org/)
+* [CSS Validator](https://jigsaw.w3.org/css-validator/)
+* [JavaScript Validator](https://jshint.com/)
+* [Python Validator](http://pep8online.com/)
+
+
 ## Deployment
 
 To deploy website to Heroku, I take following steps:
