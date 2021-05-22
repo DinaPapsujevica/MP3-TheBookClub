@@ -7,7 +7,7 @@ The site will be targeted at the people who love to read books and people who do
 Nowadays there is a huge choice of books for different ages, interests, and topics. Any one of us can get confused in this sea of books.
 That is why book review and recommendation sites are here to help solve it. 
 Existing user book reviews will help to choose and understand which could be your next book to read.
-Go to website [Website](https://the-book-club-dp.herokuapp.com/)
+Go to website: https://the-book-club-dp.herokuapp.com/
 
 ## UX
 
