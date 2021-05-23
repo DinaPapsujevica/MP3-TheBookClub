@@ -237,7 +237,13 @@ For testing code validity i used:
 
 12. As a site owner/admin I want to be able to add, edit and delete categories.
 
-    * 
+    * Once admin is logged in Manage Categories link is easy to find in Navigation bar.
+    * Manage Categories page consists of all added Categories, Edit and Delete call to action buttons, as well as Add Category button.
+    * Clicking the Add Category button admin opens form where admin needs to insert name of new Category and submit the form.
+    * New Category has been added to list with other Categories on Manage Categories page. 
+    * Clicking the Edit button opens form with existing Category name. 
+    * Admin can change name of category and submit the form or Cancel the action by clicking Cancel button in the bottom right corner.
+    * Clicking the Delete button Category has been deleted, as confirmation, flashes the message "Category Succesfully Deleted". 
 
 ### Bugs discovered:
 
