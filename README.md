@@ -20,7 +20,7 @@ Go to website: https://the-book-club-dp.herokuapp.com/
 As a first time visitor, I want 
 - to immediately understand what is the purpose of this website
 - to see the content without being register
-- to be able to see the content by Categories
+- to be able to see the Categories
 - to be able to register easily without needing to input a lot of personal information
 - to see that website is active and when is the latest book review added 
 
@@ -28,19 +28,18 @@ As a returning user, I want
 - to Log In and Log Out easily
 - to be able to add new book review easily
 - to be able to edit or delete my book reviews
-- to upload my own images using URL
+- to upload my own images using URL address
 - to have my dashboard and see all my reviews
 - to Delete my profile easily
 
 As a site owner/admin I want
-- to be able to edit and delete content created by users
 - to be able to add, edit and delete categories
 
 ### Design Choices
 
 The overall feel of the website is clean and not crowded. 
 As a main element of the website, I chose a bright background image with a girl on it.
-The image gives the right mood and fits the headline.
+The image gives the right mood and fits with the headline.
 
 #### Fonts
 
@@ -51,7 +50,7 @@ A website is made with Bootstrap, all fonts were given by default.
 As the background image was chosen in bright color itself, all other element colors are chosen neutral. For example, text color is white,
 buttons and icons are nude/brown shade, the color name is Contessa.
 This color was chosen because the same shade is a girl's sweater. This color match gives an overall clean feeling.
-The only elements which differ are Edit and Delete buttons. 
+The only elements which differs is Delete buttons. 
 They were left with their original color from Bootstrap, emphasizing these call-to-action buttons.
 
 #### Icons
@@ -92,7 +91,6 @@ As a user, you can see randomly chosen other user book reviews. Reviews are list
 For the desktop version, reviews are listed on the left side and category list on the right side from the girl image.  
 For the mobile version, reviews and categories are listed in the center.
 As a user, you can see all book categories which is added by the website's admin. 
-By pressing on one of the categories you are taken to another page with a book list which was added to this category by users.
 
 ### Log In
 
@@ -136,6 +134,8 @@ All categories are listed in alphabetical order.
 - In the future, I would like to add a section with books that are most reviewed. Section name could be - Most read books by our users.
 - I would like to implement that visitors can see how many active users this website has.
 - Every time when admin adds a new Category, this Category automatically adds to the list on Landing page.
+- Clicking on one of the categories user is taken to another page with a book list which was added to this category by all users.
+- On the landing page, I would like to add that it is visible only random 4-5 added book reviews and they change every time user refresh the page.
 
 ## Technologies Used
 
@@ -163,8 +163,16 @@ For testing code validity i used:
 * [JavaScript Validator](https://jshint.com/)
 * [Python Validator](http://pep8online.com/)
 
+### User stories testing
+
+
+
 
 ## Deployment
+
+The website is hosted usign GitHub and deployed to Heroku.
+I started by creating a new repository with `git init`. Then each update was done by the command `git add -A` and then committing it to my local repo with the command `git commit -m ”message”`.
+Then I uploaded it to my remote repo (Github) using `git push`.
 
 To deploy website to Heroku, I take following steps:
 - Create a requirements.txt file by writing terminal command pip freeze --local > requirements.txt.
@@ -196,12 +204,14 @@ All the content on this website was written by me.
 ### Media
 
 Background image was taken from [Shutterstock](https://www.shutterstock.com/da/image-photo/beautiful-young-woman-warm-sweater-book-1656315796).
+Book images was taken randomly from Google.
 
 ### Acknowledgements
 
 - I received inspiration for this project from Code Institute Mini Project by Tim Nelson 
 - Code Institute tutor assistance
 - Slack community
-
+- For testing user experience I received help from Ieva Malta
+- Big thanks for support to my mentor Spencer Barriball
 
 Website is created for educational use!

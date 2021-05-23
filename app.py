@@ -104,8 +104,8 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
-    flash("You have been logged out")
     session.clear()
+    flash("You have been logged out")
     return redirect(url_for("login"))
 
 
