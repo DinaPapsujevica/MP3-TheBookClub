@@ -18,7 +18,7 @@ Go to website: https://the-book-club-dp.herokuapp.com/
 ### User stories
 
 As a first time visitor, I want 
-- to immediately understand what is the purpose of this website
+- to immediately understand what is the purpose of this website and easy navigate the site
 - to see the content without being register
 - to be able to see the Categories
 - to be able to register easily without needing to input a lot of personal information
@@ -165,8 +165,87 @@ For testing code validity i used:
 
 ### User stories testing
 
+1. As a first time visitor, I want to immediately understand what is the purpose of this website and easy navigate the site.
+
+    * Background image, logo and headline gives clear indications about purpose of the site.
+    * Navigation bar is easy to find and use.
+    * The logo ans Home link on navigation bar always leads back to home page.
+
+2. As a first time visitor, I want to see the content without being register.
+
+    * On the Home page there are listed user book reviews also avialable to read for not registered users.
+    
+3. As a first time visitor, I want to be able to see the Categories.
+
+    * On the Home page there is list with book Categories.
+
+4. As a first time visitor, I want to be able to register easily without needing to input a lot of personal information.
+
+    * Call to action button on Home page leads new visitor to Register page.
+    * It is easy to find Register link on Navigation bar.
+    * To register to this site visitor needs to insert Username and Password.
+    * To Submit the registration form, visitor needs to insert 5-15 characters for each Username and Password.
+    * Entering any other amount of characters for Username and Password, Pops up tooltip "Please match the requested format."
+    * Information about what format is exactly requested is missing.
+
+5. As a first time visitor, I want to see that website is active and when is the latest book review added.
+
+    * Book reviews on Home page contains information about date when book review was added.
+
+6. As a returning user, I want to Log In and Log Out easily.
+
+    * Log In link is easy to find on Navigation bar.
+    * Entering wrong Username/Password flashes message "Incorrect Username and/or Password!"
+    * Once form is submitted Welcoming user message flashes.
+    * Log Out link is easy to find on Navigation bar.
+
+7. As a returning user, I want to be able to add new book review easily.
+
+    * Once user is succesfully logged in opens user's Profile page.
+    * Add Book button is easy to find on Profile page.
+    * Clicking the Add Book button opens the Add New Book Review form
+    * Input fields are easy to understand and for better understanding contains icons.
+    * Input fields have red border and small red exclamation mark indicating that all input fields must be filled before submit the form.
+    * After filling the input field border color changes to green and checkmark appears.
+    * There is Cancel button in the bottom right corner to cancel the action. 
+
+8. As a returning user, I want to be able to edit or delete my book reviews.
+
+    * Each book review has its own book card, containing all added information.
+    * Edit and Delete buttons are placed for each of user's cards.
+    * Clicking the Edit button opens the same form as when added new book review.
+    * URL address is missing and needs to be added again before submitting this form.
+    * There is Cancel button in the bottom right corner to cancel the action.
+    * Clicking the Delete button on book card, book review has been deleted and as confirmation flashes the message "Book Review Successfully Deleted".
+    * Confirming modal for this action is missing.
+
+9. As a returning user, I want to upload my own images using URL address.
+
+    * To Add New Book Review user needs to enter URL address to add book image.
+    * URL address validation is missing.
+
+10. As a returning user, I want to have my dashboard and see all my reviews.
+
+    * Once user is logged in Profile link is easy to find in Navigation bar.
+    * User's Profile page contains Add Book button, which leads to form, user's book reviews with option to Edit or Delete them
+      and call to action button Delete Profile.
+
+11. As a returning user, I want to Delete my profile easily.
+
+    * Clicking the Delete Profile button user's profile has been deleted, as confirmation, flashes the message "Your Profile Successfully Deleted".
+    * Confirming modal for this action is missing.
+
+12. As a site owner/admin I want to be able to add, edit and delete categories.
+
+    * 
+
+### Bugs discovered:
+
+#### Solved bugs
 
 
+
+    
 
 ## Deployment
 
