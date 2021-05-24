@@ -136,6 +136,7 @@ All categories are listed in alphabetical order.
 - Every time when admin adds a new Category, this Category automatically adds to the list on Landing page.
 - Clicking on one of the categories user is taken to another page with a book list which was added to this category by all users.
 - On the landing page, I would like to add that it is visible only random 4-5 added book reviews and they change every time user refresh the page.
+- In the future I would like to add confirmation modal for the action when users wants to Delete something.
 
 ## Technologies Used
 
@@ -152,7 +153,8 @@ All categories are listed in alphabetical order.
 - Code institute video projects, especcially Mini Project by Tim Nelson
 - [W3scools.com](https://www.w3schools.com/)
 - [Stackoverflow](https://stackoverflow.com/)
-- [WebFX](https://www.webfx.com/blog/web-design/responsive-background-image/) 
+- [WebFX](https://www.webfx.com/blog/web-design/responsive-background-image/)
+- [CSS Tricks](https://css-tricks.com/couple-takes-sticky-footer/)
 
 ## Testing
 
@@ -245,14 +247,6 @@ For testing code validity i used:
     * Admin can change name of category and submit the form or Cancel the action by clicking Cancel button in the bottom right corner.
     * Clicking the Delete button Category has been deleted, as confirmation, flashes the message "Category Succesfully Deleted". 
 
-### Bugs discovered:
-
-#### Solved bugs
-
-
-
-    
-
 ## Deployment
 
 The website is hosted usign GitHub and deployed to Heroku.
@@ -289,14 +283,13 @@ All the content on this website was written by me.
 ### Media
 
 Background image was taken from [Shutterstock](https://www.shutterstock.com/da/image-photo/beautiful-young-woman-warm-sweater-book-1656315796).
-Book images was taken randomly from Google.
+URL of book images were taken randomly from Google.
 
 ### Acknowledgements
 
 - I received inspiration for this project from Code Institute Mini Project by Tim Nelson 
 - Code Institute tutor assistance
 - Slack community
-- For testing user experience I received help from Ieva Malta
-- Big thanks for support to my mentor Spencer Barriball
+- My mentor Spencer Barriball
 
 Website is created for educational use!

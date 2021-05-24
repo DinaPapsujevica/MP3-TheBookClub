@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2 class="text-center text-white text-uppercase font-weight-light mb-5 mt-5 text-shadow">Add Category</h2>
+    <h2 class="text-center text-white text-uppercase font-weight-light mb-4 mt-5 text-shadow">Add Category</h2>
 
     <div class="container-fluid mb-5">
         <div class="row p-2">
-            <form class="col-md-6 offset-md-3 mt-5 bg-light was-validated" method="POST" action="{{ url_for('add_category') }}">
+            <form class="col-md-6 offset-md-3 mt-5 was-validated" method="POST" action="{{ url_for('add_category') }}">
                 <!-- category name -->
                 <div class="row">
                     <div class="col-md-10 form-group mt-3">

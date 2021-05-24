@@ -4,14 +4,7 @@
   box-sizing: border-box;
 }
 
-html {
-    height: 100%;
-}
-
 body {
-    min-height: 100%;
-    display: grid;
-    grid-template-rows: 1fr auto;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/hero3.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -140,16 +133,6 @@ form {
 
 .custom-select option {
     color: #c27355;
-}
-
-/*--------------------------------------Footer */
-.footer {
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-
-.footer p {
-    font-size: 12px
 }
 
 /* ------------------------------------------ Media queries */
